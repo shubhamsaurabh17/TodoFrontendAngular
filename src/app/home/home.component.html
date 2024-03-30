@@ -1,0 +1,14 @@
+<h3 class="heading">Task To Complete!</h3><br>
+<h3 *ngIf="data.length <= 0" class="heading">No Data To Display</h3>
+<div class="card-container">
+    <div *ngFor="let item of data" class="card-wrapper">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>{{ item.t_title }}</mat-card-title>
+                <mat-card-subtitle class="dt">{{item.createdOn }}</mat-card-subtitle>
+                <mat-card-subtitle>{{ item.t_desc  | titlecase }}</mat-card-subtitle>
+                <button mat-raised-button color="warn" (click)="OnDelete(item.t_id)">Done</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

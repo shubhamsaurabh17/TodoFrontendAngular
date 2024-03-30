@@ -1,0 +1,32 @@
+<h3 class="heading">Task History!</h3><br>
+<ng-container *ngIf="data.length <= 0">
+    <h3 class="heading">No Data To Display</h3>
+</ng-container>
+
+<mat-table *ngIf="data.length > 0" [dataSource]="data" class="mat-elevation-z8">
+    <!-- Define the columns -->
+    <ng-container matColumnDef="title">
+        <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+        <mat-cell *matCellDef="let item">{{ item.t_title }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+        <mat-cell *matCellDef="let item">{{ item.t_desc | titlecase }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="createdOn">
+        <mat-header-cell *matHeaderCellDef>Created On</mat-header-cell>
+        <mat-cell *matCellDef="let item">{{ item.createdOn }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="completedOn">
+        <mat-header-cell *matHeaderCellDef>Completed On</mat-header-cell>
+        <mat-cell *matCellDef="let item">{{ item.completedOn }}</mat-cell>
+    </ng-container>
+
+
+    <!-- Define what data to display for each column -->
+    <mat-header-row *matHeaderRowDef="['title', 'description', 'createdOn', 'completedOn']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['title', 'description','createdOn', 'completedOn']"></mat-row>
+</mat-table>

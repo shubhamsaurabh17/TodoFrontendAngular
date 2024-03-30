@@ -1,0 +1,21 @@
+.example-full-width {
+    width: 100%;
+}
+
+.example-form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.m-2{
+    margin-right: 2%;
+}
+
+.heading{
+    text-align: center;
+    color: red;
+}

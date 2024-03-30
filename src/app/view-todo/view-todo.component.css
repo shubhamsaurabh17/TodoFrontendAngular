@@ -1,0 +1,21 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-wrapper {
+    flex: 0 0 calc(33.33% - 10px); /* Adjust spacing between cards */
+    margin-right: 10px; /* Adjust spacing between cards */
+    margin-bottom: 10px; /* Adjust spacing between rows */
+}
+
+
+.dt{
+    color: green;
+    font-style: italic;
+}
+
+.heading{
+    text-align: center;
+    color: red;
+}

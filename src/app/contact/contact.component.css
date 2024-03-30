@@ -1,0 +1,10 @@
+.heading{
+    text-align: center;
+    color: red;
+}
+
+.dt{
+    color: green;
+    /* font-style: italic; */
+    text-align: center;
+}
